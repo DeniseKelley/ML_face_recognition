@@ -3,7 +3,7 @@ The final product of this project will replace a face with an appropriate emoji 
 
 ## The following emotions to be detected
 
-    * angry
+    ```* angry
     * disgust
     * happy
     * sad
@@ -27,6 +27,7 @@ The final product of this project will replace a face with an appropriate emoji 
     *    The *.prototxt* file(s) which define the model architecture (i.e., the layers themselves)
     *    The *.caffemodel* file which contains the weights for the actual layers
 
+![ezgif com-gif-maker(22)](https://user-images.githubusercontent.com/66845312/159154529-ff404036-0efb-4668-ad7f-2a36a0e4c26b.gif)
 
 
 
