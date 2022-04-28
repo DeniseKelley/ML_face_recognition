@@ -13,7 +13,7 @@ The final product of this project will replace a face with an appropriate emoji 
 ## Tasks 
 
 - [x] Recognise the face using openCV
-- [ ] Identify the facial expression
+- [x] Identify the facial expression
 - [ ] Replace facial expression with the appropriate emoji
 
 
@@ -34,4 +34,10 @@ When image is loaded the blob is created using dnn.blobFromImage that takes care
 
 
 ## 2. Identify the facial expression
+
+Description in progress...
+
+![ezgif com-gif-maker(24)](https://user-images.githubusercontent.com/66845312/165679564-e77bb841-a602-4e9f-a4e0-db845a70ab16.gif)
+
+
 ## 3. Replace facial expression with the appropriate emoji
