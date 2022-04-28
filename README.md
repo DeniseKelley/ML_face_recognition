@@ -37,7 +37,8 @@ When image is loaded the blob is created using dnn.blobFromImage that takes care
 
 Description in progress...
 
-![ezgif com-gif-maker(26)](https://user-images.githubusercontent.com/66845312/165680097-b2cca560-0a4f-46ec-b924-b2ed823fc42c.gif)
+
+![ezgif com-gif-maker(28)](https://user-images.githubusercontent.com/66845312/165681381-9a645c48-3b95-41f4-9023-5b126a052cdc.gif)
 
 
 
