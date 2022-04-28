@@ -37,7 +37,8 @@ When image is loaded the blob is created using dnn.blobFromImage that takes care
 
 Description in progress...
 
-![ezgif com-gif-maker(24)](https://user-images.githubusercontent.com/66845312/165679564-e77bb841-a602-4e9f-a4e0-db845a70ab16.gif)
+![ezgif com-gif-maker(26)](https://user-images.githubusercontent.com/66845312/165680097-b2cca560-0a4f-46ec-b924-b2ed823fc42c.gif)
+
 
 
 ## 3. Replace facial expression with the appropriate emoji
