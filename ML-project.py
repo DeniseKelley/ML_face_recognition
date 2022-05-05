@@ -4,12 +4,12 @@ import os
 import cv2 as cv
 import matplotlib.pyplot as plt
 
-#second part 
+
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 from keras.preprocessing.image import img_to_array
 from keras.preprocessing import image 
-emotion_model = load_model('Model_ethnicity.h5') #5 emotions
+emotion_model = load_model('./models/Model_ethnicity_my.h5') #5 emotions
 #class_labels = ["Anger", "Fear", "Happy", "Sad", "Surprise"]
 class_labels = ['Angry','Disgust','Fear','Happy','Sad','Surprise','Neutral']
 
@@ -38,6 +38,15 @@ out_fps = 20
 videoW_f = cv.VideoWriter_fourcc(*'mp4v')  
 writer = cv.VideoWriter()
 #########
+
+#Import empjies files
+happy = cv.imread("emojies/happy.png")
+neutral =cv.imread("emojies/neutral.png")
+angry = cv.imread("emojies/angry.png")
+disgust = cv.imread("emojies/disgust.png")
+fear = cv.imread("emojies/Fear.png")
+sad = cv.imread("emojies/Sad.png")
+surprise =cv.imread("emojies/Surprised.png")
 
 #save the video to the main folder test_out file
 out_path = main_folder_path+'test_out'+os.sep+'example.mp4' #where I save the video
@@ -84,10 +93,11 @@ while True:
 
         #individual frame with area where we have face, 0 only 1 channel
         face = frame[startY: endY, startX:endX] 
+        
         face = cv.cvtColor(face, cv.COLOR_BGR2GRAY)
 
         img = cv.resize(face, (48, 48))
-        #add one more channel
+        #add one more channelq
         img = img.reshape(48, 48, 1)
         img = img/255
         # plt.imshow(img)
@@ -97,6 +107,46 @@ while True:
         #class_labels_3 = ["Happy", "Sad", "Surprise"]
         pred_ind = np.argmax(emotion_model.predict(img))
         pred = class_labels[pred_ind]
+        if pred == 'Happy':
+            #need to reshape the imoji to the shape of the face
+            #height=1 width =0
+            shape = face.shape[1], face.shape[0]
+            happy = cv.resize(happy, shape)
+            #replace the face with imoji
+            #startY: endY =height startX:endX =width
+            frame[startY: endY, startX:endX] = happy
+
+        if pred == 'Neutral':
+            shape = face.shape[1], face.shape[0]
+            neutral = cv.resize(neutral, shape)
+            frame[startY: endY, startX:endX] = neutral
+        
+        if pred == 'Angry':
+            shape = face.shape[1], face.shape[0]
+            angry = cv.resize(angry, shape)
+            frame[startY: endY, startX:endX] = angry
+        
+        if pred == 'Disgust':
+            shape = face.shape[1], face.shape[0]
+            disgust = cv.resize(disgust, shape)
+            frame[startY:endY, startX:endX] = disgust
+        
+        if pred == 'Fear':
+            shape = face.shape[1], face.shape[0]
+            fear = cv.resize(fear, shape)
+            frame[startY:endY, startX:endX] = fear
+
+        if pred == 'Sad':
+            shape = face.shape[1], face.shape[0]
+            sad = cv.resize(sad, shape)
+            frame[startY:endY, startX:endX] = sad
+
+        if pred == 'Surprise':
+            shape = face.shape[1], face.shape[0]
+            surprise = cv.resize(surprise, shape)
+            frame[startY:endY, startX:endX] = surprise
+        
+
         
         # draw the bounding box of the face along with the associated
 		# probability
