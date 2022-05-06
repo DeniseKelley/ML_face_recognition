@@ -46,8 +46,6 @@ According to the data count both models used the same data set. There are 7 cate
 
 
 
-![ezgif com-gif-maker(28)](https://user-images.githubusercontent.com/66845312/165681381-9a645c48-3b95-41f4-9023-5b126a052cdc.gif)
-
 ![ezgif com-gif-maker(30)](https://user-images.githubusercontent.com/66845312/167151803-55b79d87-fda7-4737-b5ba-a783fc001b9c.gif)
 
 
@@ -55,5 +53,5 @@ According to the data count both models used the same data set. There are 7 cate
 
 For the final part emojies were downloaded from web and each nedded to be reshaped to match the dimensions of the captured face to replace it. 
 
-![ezgif com-gif-maker(30)](https://user-images.githubusercontent.com/66845312/167151724-2ec0fa8b-fec4-4222-97fe-6dec64aae0f6.gif)
 
+![ezgif com-gif-maker(29)](https://user-images.githubusercontent.com/66845312/167152089-93459f1d-8e42-42e5-8748-95f3bce12ebc.gif)
